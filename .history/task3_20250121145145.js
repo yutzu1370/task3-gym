@@ -1,7 +1,7 @@
 const members = ["Alice", "Bob", "Charlie", "Diana", "Evan", "Fiona", "George", "Hannah"];
 let purchaseRecords = [];
 function addPurchaseRecord(name, courses) {
-    if( courses !== "number" || typeof courses!== "number" || courses <= 0) {
+    if(name == undefined || name == "" || courses !== "number" || typeof courses!== "number" || courses <= 0) {
         console.log("輸入錯誤，請輸入有效的會員名稱和課程數量。");
         return;
     }
@@ -9,11 +9,11 @@ function addPurchaseRecord(name, courses) {
 
     let unitPrice = 0;
     if(courses <= 10) {
-        unitPrice = 1500;
+        let unitPrice = 1500;
     }else if(courses <= 20 ){
-        unitPrice = 1300;
+        let unitPrice = 1300;
     }else if(courses >20){
-        unitPrice = 1100;
+        let unitPrice = 1100;
     }else{
         console.log("輸入錯誤");
     }
@@ -24,12 +24,12 @@ function addPurchaseRecord(name, courses) {
         unitPrice: unitPrice, 
         totalPrice: totalPrice
     });
-    
+    新增購買記錄成功！會員 Alice 購買 4 堂課，總金額為 6000 元。
     console.log(`新增購買記錄成功！會員 ${name} 購買 ${courses} 堂課，總金額為 ${totalPrice} 元。`);
 }
 addPurchaseRecord("Alice", 4);
-//addPurchaseRecord("Bob", 12); 
-//addPurchaseRecord("Charlie", 25);
-//addPurchaseRecord("Hannah", 50);
-//addPurchaseRecord("名稱", "課程數量"); 
-//console.log(purchaseRecords);
+addPurchaseRecord("Bob", 12); 
+addPurchaseRecord("Charlie", 25);
+addPurchaseRecord("Hannah", 50);
+addPurchaseRecord("名稱", "課程數量"); 
+console.log(purchaseRecords);

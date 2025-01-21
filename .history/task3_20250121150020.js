@@ -1,7 +1,7 @@
 const members = ["Alice", "Bob", "Charlie", "Diana", "Evan", "Fiona", "George", "Hannah"];
 let purchaseRecords = [];
 function addPurchaseRecord(name, courses) {
-    if( courses !== "number" || typeof courses!== "number" || courses <= 0) {
+    if(typeof name !== 'string' || name.trim() === ''  || courses !== "number" || typeof courses!== "number" || courses <= 0) {
         console.log("輸入錯誤，請輸入有效的會員名稱和課程數量。");
         return;
     }
