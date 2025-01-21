@@ -1,4 +1,4 @@
-const members = ["Alice", "Bob", "Charlie", "Diana", "Evan", "Fiona", "George", "Hannah"];
+//const members = ["Alice", "Bob", "Charlie", "Diana", "Evan", "Fiona", "George", "Hannah"];
 let purchaseRecords = [];
 function addPurchaseRecord(name, courses) {
     if( !name || typeof courses !== "number" || courses <= 0) {
