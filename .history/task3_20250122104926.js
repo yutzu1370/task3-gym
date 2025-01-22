@@ -42,25 +42,6 @@ function calculateTotalPrice() {
     
 }
 
-/*第三階段：篩選出還沒有購課的會員
-新增函式 filterNoPurchaseMember，篩選特定條件的會員記錄。例如：未購買過課程的會員，並依序列出
-
-印出 console.log 文字為 未購買課程的會員有：....... */
-
-function filterNoPurchaseMember() {
-    let PurchaseMembers=[];
-    purchaseRecords.forEach(function(item){
-        PurchaseMembers.push(item["name"]);
-    })
-
-    let noPurchaseMembers=members.filter(function(item){
-        return !PurchaseMembers.includes(item)
-    })
-        
-    
-   console.log(`未購買課程的會員有：${noPurchaseMembers}`);
-}
-
 
 
 addPurchaseRecord("Alice", 4);
@@ -70,4 +51,3 @@ addPurchaseRecord("Hannah", 50);
 addPurchaseRecord("名稱", "課程數量"); 
 
 calculateTotalPrice();
-filterNoPurchaseMember();

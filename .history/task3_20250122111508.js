@@ -52,13 +52,14 @@ function filterNoPurchaseMember() {
     purchaseRecords.forEach(function(item){
         PurchaseMembers.push(item["name"]);
     })
+    console.log(PurchaseMembers);
 
-    let noPurchaseMembers=members.filter(function(item){
-        return !PurchaseMembers.includes(item)
-    })
+    /*let noPurchaseMembers=members.filter(function(item){
+        return !item["name"].includes(purchaseRecords);
+    })*/
         
     
-   console.log(`未購買課程的會員有：${noPurchaseMembers}`);
+  //  console.log(`未購買課程的會員有：${noPurchaseMembers}`);
 }
 
 

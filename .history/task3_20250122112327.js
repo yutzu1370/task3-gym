@@ -53,6 +53,8 @@ function filterNoPurchaseMember() {
         PurchaseMembers.push(item["name"]);
     })
 
+    console.log(PurchaseMembers);
+
     let noPurchaseMembers=members.filter(function(item){
         return !PurchaseMembers.includes(item)
     })
